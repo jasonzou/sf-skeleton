@@ -155,6 +155,6 @@ class __TwigTemplate_1744b348235f6c695ca0ab79d3153309a5f3069800196d4b33ba7712607
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/home/jason/workspace/atom3-01/templates/base.html.twig");
+", "base.html.twig", "/home/jason/workspace/sf-skeleton/templates/base.html.twig");
     }
 }

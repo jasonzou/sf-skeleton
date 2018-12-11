@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+ 
+
+        {% block stylesheets %}{% endblock %}
+        <script src="{{ asset('build/js/runtime.js') }}"></script>
+        <script src="{{ asset('build/js/app.js') }}"></script>
+        <link href="{{ asset('build/css/app.css') }}" rel="stylesheet" type="text/css" >
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+            <example></example>
+    </body>
+</html>

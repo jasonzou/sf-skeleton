@@ -1,0 +1,21 @@
+{
+  "name": "sf-vue",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+    "encore": "^0.0.30-beta",
+    "symfony": "^0.0.1",
+    "webpack": "^4.27.1",
+    "webpack-notifier": "^1.7.0"
+  },
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.22.2",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "vue": "^2.5.20",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.5.20",
+    "webpack-cli": "^3.1.2"
+  }
+}

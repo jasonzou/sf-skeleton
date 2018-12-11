@@ -94,6 +94,6 @@ class __TwigTemplate_9ba57997f460fc84ae5ef48f04fa58332dddaa328cfe279b4f327ae4929
    {{ record }} 
    </div>
 {% endblock %}
-", "admin.html.twig", "/home/jason/workspace/atom3-01/templates/admin.html.twig");
+", "admin.html.twig", "/home/jason/workspace/sf-skeleton/templates/admin.html.twig");
     }
 }
