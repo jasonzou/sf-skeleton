@@ -28,12 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "Atom3\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests/"
+            "Atom3\\Tests\\": "tests/"
         }
     },
     "replace": {
