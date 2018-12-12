@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {},
   "dependencies": {
+    "@vue/devtools": "^4.1.5",
     "encore": "^0.0.30-beta",
     "symfony": "^0.0.1",
     "webpack": "^4.27.1",

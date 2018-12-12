@@ -9,13 +9,21 @@
  
 
         {% block stylesheets %}{% endblock %}
-        <script src="{{ asset('build/js/runtime.js') }}"></script>
-        <script src="{{ asset('build/js/app.js') }}"></script>
-        <link href="{{ asset('build/css/app.css') }}" rel="stylesheet" type="text/css" >
+        <link href="{{ asset('/build/app.css') }}" rel="stylesheet" type="text/css" >
+        
+        <!-- vuejs -->
+        <script>
+  window.__VUE_DEVTOOLS_HOST__ = '192.168.0.20' // default: localhost
+  window.__VUE_DEVTOOLS_PORT__ = '8098' // default: 8098
+</script>
+<script src="http://192.168.0.20:8098"></script>
     </head>
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
             <example></example>
+        {% block javascript %}
+  		{{ encore_entry_script_tags('app') }}
+	{% endblock %}
     </body>
 </html>
