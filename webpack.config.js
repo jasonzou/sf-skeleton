@@ -24,7 +24,7 @@ Encore
     .addPlugin(new VueLoaderPlugin())
    
     // $/jQuery as a global variable
-    .autoProvidejQuery()
+    //.autoProvidejQuery()
     .addAliases({ 
         vue: 'vue/dist/vue.js'
     })
