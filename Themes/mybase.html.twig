@@ -5,8 +5,7 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <script src="http://localhost:8098"></script>
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('build/css/style.css') }}">
-            <link rel="stylesheet" href="{{ asset('build/js/app.css') }}">
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
     </head>
     <body>
@@ -14,7 +13,7 @@
         {% block body %}{% endblock %}
  
         {% block javascripts %}
-            <script src="{{ asset('build/js/app.js') }}"></script>
+            {{ encore_entry_script_tags('app') }}        
         {% endblock %}
     </body>
 </html>

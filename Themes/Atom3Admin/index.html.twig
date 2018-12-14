@@ -1,4 +1,4 @@
-{% extends './Four/_base/layout.html.twig' %}
+{% extends 'Atom3Admin/layouts/main.html.twig' %}
  
 {% block title %}Hello {{ controller_name }}!{% endblock %}
  
@@ -7,7 +7,10 @@
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
-<h1>{{ record }} </h1> 
+<h1>{{ record }} </h1>
+      <h2>{{ controller_name }}
+      
+       </h2> 
 <div class="example-wrapper">
     <div id="vueApp"></div>
 </div>

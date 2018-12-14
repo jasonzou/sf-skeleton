@@ -38,8 +38,8 @@ class HomepageController extends BaseController
             $record = $contentRepository->findOneBy(['contentType' => $params[0]]);
 	}*/
 
-	    $templates = 'index.html.twig';
-	    $record ="Hello, Atom3-core";
+	$templates = 'Atom3Admin/index.html.twig';
+	$record ="Hello, Atom3-core";
 	    //$this->templateChooser->homepage();
 
         return $this->render($templates, ['record' => $record,
