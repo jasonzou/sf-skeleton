@@ -17,6 +17,7 @@ Encore
     .addEntry('app', './assets/js/index.js')
     //.addStyleEntry('css/style', './assets/css/custom.less')
     .enableLessLoader()
+    .enableSassLoader()
     .addLoader({
         test: /\.vue$/,
         loader: 'vue-loader'

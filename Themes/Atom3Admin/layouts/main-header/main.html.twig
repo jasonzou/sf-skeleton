@@ -2,14 +2,15 @@
 
   <!-- Logo -->
   <a href="/" class="logo">
-    @section('logo-mini')
+    <!-- @section('logo-mini') -->
     <!-- mini logo for sidebar mini 50x50 pixels -->
-    <span class="logo-mini"><b> short-title }}</b></span>
-    @show
+    <span class="logo-mini"><b> <!--  short-title }} --> </b></span>
+    <!-- @show
     @section('logo-lg')
+    -->
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-lg"><b> title }}</b></span>
-    @show
+    <span class="logo-lg"><b><!-- title }} --></b></span>
+    <!-- @show -->
   </a>
 
   <!-- Header Navbar -->
@@ -24,22 +25,22 @@
     <!-- Navbar Right Menu -->
     <div class="navbar-custom-menu">
       <ul class="nav navbar-nav">
-        @if (auth()->check())
-        @include('admin-lte::layouts.main-header.navbar-right-menu.message-menu')
-        @include('admin-lte::layouts.main-header.navbar-right-menu.notifications-menu')
-        @include('admin-lte::layouts.main-header.navbar-right-menu.tasks-menu')
-        @include('admin-lte::layouts.main-header.navbar-right-menu.user-menu')
+        <!-- @if (auth()->check()) -->
+        {% include('Atom3Admin/layouts/main-header/navbar-right-menu/message-menu.html.twig') %}
+        {% include('Atom3Admin/layouts/main-header/navbar-right-menu/notifications-menu.html.twig') %}
+        {% include('Atom3Admin/layouts/main-header/navbar-right-menu/tasks-menu.html.twig') %}
+        {% include('Atom3Admin/layouts/main-header/navbar-right-menu/user-menu.html.twig') %}
         <form id="logout-form" action=" url('logout') }}" method="POST" style="display: none;">
           {{ csrf_token('form') }}
         </form>
         <li>
           <a href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i> <span>Logout</span></a>
         </li>
-        @else
+        <!-- @else -->
         <li>
           <a href=" route('login') }}"><i class="fa fa-sign-in"></i> Login</a>
         </li>
-        @endif
+        <!-- @endif -->
         <!-- Control Sidebar Toggle Button -->
         <li>
           <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>

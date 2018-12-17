@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>@yield('title', config('app.name', 'AdminLTE'))</title>
+  <!-- @yield('title', config('app.name', 'AdminLTE')) --> 
+  <title>Atom3Admin</title>
 
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -34,8 +34,8 @@
 
 <body class="hold-transition>
       <!-- skin-{ config('admin-lte.skin', 'blue') }} { config('admin-lte.layout', 'sidebar-mini') }}" -->
-    {{ controller_name }}
-  <div id="app1" class="wrapper">
+   <!-- {{ controller_name }} -->
+    <div id="app1" class="wrapper">
 
     <!-- Main Header -->
     {% include('Atom3Admin/layouts/main-header/main.html.twig') %}
@@ -50,7 +50,7 @@
             {% block body %}
       {{ controller_name }}
       
-      {{ record }} 
+      <h1>{{ record }} </h1>
   {% endblock %}
     <!-- Main Footer -->
     {% include('Atom3Admin/layouts/main-footer/main.html.twig') %}
