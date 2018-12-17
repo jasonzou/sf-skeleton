@@ -8,6 +8,7 @@
     "encore": "^0.0.30-beta",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
+    "materialize-css": "^1.0.0-rc.2",
     "sass": "^1.15.2",
     "symfony": "^0.0.1",
     "vue-router": "^3.0.2",

@@ -27,6 +27,10 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+   
+  <!-- material icons -->  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -38,7 +42,67 @@
     <div id="app1" class="wrapper">
 
     <!-- Main Header -->
-    {% include('Atom3Admin/layouts/main-header/main.html.twig') %}
+    <!--  "Atom3Admin/layouts/main-header/main.html.twig" -->
+        
+        <header class="main-header">
+
+  <!-- Logo -->
+  <a href="/" class="logo">
+    <!-- @section('logo-mini') -->
+    <!-- mini logo for sidebar mini 50x50 pixels -->
+    <span class="logo-mini"><b> <!--  short-title }} --> </b></span>
+    <!-- @show
+    @section('logo-lg')
+    -->
+    <!-- logo for regular state and mobile devices -->
+    <span class="logo-lg"><b><!-- title }} --></b></span>
+    <!-- @show -->
+  </a>
+
+  <!-- Header Navbar -->
+  <nav>
+        <div class="navbar-wrapper">
+            <!-- Sidebar toggle button-->
+            <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Logo</a>
+
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      
+                            {% include('Atom3Admin/layouts/main-header/navbar-right-menu/message-menu.html.twig') %}
+
+            <!-- Navbar Right Menu -->
+            <ul class="nav-mobile right">
+                    <!-- Menu toggle button -->
+                    <li> <a href="#" class="dropdown-toggle" data-target="mesg-dropdown">
+                            <i style="display:inline" class="material-icons">email</i>
+                            <span class="label label-success left">4</span>
+                        </a>   
+                    </li>
+                    
+
+                <!-- @if (auth()->check()) -->
+                <!-- include('Atom3Admin/layouts/main-header/navbar-right-menu/notifications-menu.html.twig')  -->
+                <!--  include('Atom3Admin/layouts/main-header/navbar-right-menu/tasks-menu.html.twig') -->
+                <!-- include('Atom3Admin/layouts/main-header/navbar-right-menu/user-menu.html.twig')  -->
+                <form id="logout-form" action=" url('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_token('form') }}
+                </form>
+                <li>
+                    <a href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i> <span>Logout</span></a>
+                </li>
+                <!-- @else -->
+                <li>
+                    <a href=" route('login') }}"><i class="material-icons"></i> Login</a>
+                </li>
+                <!-- @endif -->
+                <!-- Control Sidebar Toggle Button -->
+                <li>
+                    <a href="#" data-toggle="control-sidebar"><i class="material-icons"></i></a>
+                </li>
+
+            </ul>
+        </div>
+  </nav>
+</header>
     <!-- Left side column. contains the logo and sidebar -->
     {% include('Atom3Admin/layouts/main-sidebar/main.html.twig') %}
 
@@ -60,9 +124,11 @@
   </div>
   
   {% block scripts %}
+        <script src="{{ asset('/js/materialize.js') }}" charset="utf-8"></script>
+
   <script src="{{ asset('/js/manifest.js') }}" charset="utf-8"></script>
   <script src="{{ asset('/js/vendor.js') }}" charset="utf-8"></script>
-  <script src="{{ asset('/js/admin-lte.js') }}" charset="utf-8"></script>
+  <script src="{{ asset('/js/atom3.js') }}" charset="utf-8"></script>
     {% endblock %}
           {% block javascript %}
   		{{ encore_entry_script_tags('app') }}
