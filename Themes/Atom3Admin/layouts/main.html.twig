@@ -30,6 +30,7 @@
 
         <!-- material icons -->  
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" rel="stylesheet">
 
          {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
@@ -113,15 +114,36 @@
             {% include('Atom3Admin/layouts/main-sidebar/main.html.twig') %}
 
             <!-- Content Wrapper. Contains page content -->
-            {% embed "Atom3Admin/layouts/content-wrapper/main.html.twig" %}
-            {% endembed %}
+            <!--  "Atom3Admin/layouts/content-wrapper/main.html.twig" -->
+            <div class="col m9">
+                    <!-- Content Header (Page header) -->
+                  <div class="content-header">
+                      <strong>Module</strong>
+                    {% block  breadcrumbs %}
+                    <ol class="breadcrumb">
+                      <li><a href="#"><i class="material-icons">dashboard</i>Home</a></li>
+                      <i class="icon ion-md-settings"></i>
+                      <li class="active">Title</li>
+                    </ol>
+                    {% endblock %}
+                  </div>
+
+                  <!-- Main content -->
+                  <section class="content">
+
+                    {% block body %}
+                        {{ controller_name }}
+
+                        <strong>{{ record }} </strong>
+                    {% endblock %} 
+
+
+                  </section>
+                  <!-- /.content -->
+                </div>
             </div>
 
-            {% block body %}
-                {{ controller_name }}
-
-                <h1>{{ record }} </h1>
-            {% endblock %}
+            
 
             <!-- Main Footer -->
             {% include('Atom3Admin/layouts/main-footer/main.html.twig') %}
